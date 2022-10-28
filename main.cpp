@@ -45,7 +45,7 @@ int main(int argc, char** argv){
     
     
      cout<<"\n"<<endl;
-    cout<<"***************DATOS*********************************"<<endl;
+    cout<<"*******************************DATOS*********************************"<<endl;
     Datos *fNac = new Datos(nombre, apellido, anio, mes,dia);
     Datos *fAct = new Datos(anio1,mes1,dia1);
     Datos *dat1 = new Datos();
