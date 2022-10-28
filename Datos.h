@@ -1,7 +1,7 @@
 /***********************************************************************
  * Module:  Datos.h
  * Author:  jeffe
- * Modified: viernes, 28 de octubre de 2022 4:07:27
+ * Modified: viernes, 28 de octubre de 2022
  * Purpose: Declaration of the class Datos
  ***********************************************************************/
 
