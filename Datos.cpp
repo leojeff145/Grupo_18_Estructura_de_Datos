@@ -147,7 +147,6 @@ void Datos::CalcEdad(Datos fechaActual, Datos fechaNacimiento)
 void Datos::PrintDat(Datos datos)
 {	
    cout<<"Nombre: "<<datos.getNombre()<<endl;
-   cout<<"Nombre: "<<datos.getNombre()<<endl;
    cout<<"Apellido: "<<datos.getApellido()<<endl;
    cout<<"*************Su Edad es*************"<<endl;
 }
