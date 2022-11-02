@@ -1,6 +1,10 @@
 
 #include "Negacion.h"
-#include <stdint.h>
+#include <iostream>
+#include <stdlib.h>
+#include <conio.h>
+#include <stdio.h>
+using namespace std;
 using namespace std;
 
 Negacion::Negacion(bool val_a, bool val_b)
@@ -11,7 +15,7 @@ Negacion::Negacion(bool val_a, bool val_b)
 
 Negacion::Negacion()
 {
-   
+
 }
 
 Negacion::~Negacion()
@@ -43,15 +47,20 @@ void Negacion::setVal1(bool newVal1)
    val1 = newVal1;
 }
 
-Negacion Negacion::operator!()
+void Negacion::operator!()
 {
-   bool a=true,b=false;
+   bool a=true,b=false,c,d;
    Negacion *objOp = new Negacion(a,b);
-   
-   return objOp->operator!();
+   cout<<"val1: "<<a<<endl;
+   cout<<"val2: "<<b<<endl; 
+   cout<<"***********************************************"<<endl;
+   c=!objOp->getVal1();
+   d=!objOp->getVal2();
+   cout<<"val1: "<<c<<endl;
+   cout<<"val2: "<<d<<endl;   
 }
 
-void Negacion::imprimir(Negacion *objOp)
+/*void Negacion::imprimir(Negacion *objOp)
 {
    
-}
+}*/

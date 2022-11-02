@@ -9,7 +9,7 @@ int main()
 {
     Negacion *objOp = new Negacion();
     objOp->operator!();
-    cout<<objOp->getVal1()<<"   "<<objOp->getVal2()<<endl;
+    //cout<<objOp->getVal1()<<"   "<<objOp->getVal2()<<endl;
 
     return 0;
 }

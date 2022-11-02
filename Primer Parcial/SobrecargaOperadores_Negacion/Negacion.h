@@ -14,8 +14,9 @@ public:
    void setVal2(bool newVal2);
    bool getVal1(void);
    void setVal1(bool newVal1);
-   void imprimir(Negacion *objOp);  
-   Negacion operator ! (); 
+   //void imprimir(Negacion *objOp);  
+   //Negacion operator ! ();
+   void operator ! ();
 
 protected:
 private:
