@@ -9,6 +9,10 @@ Negacion::Negacion(bool val_a, bool val_b)
   this->val2=val_b; 
 }
 
+Negacion::Negacion()
+{
+   
+}
 
 Negacion::~Negacion()
 {   

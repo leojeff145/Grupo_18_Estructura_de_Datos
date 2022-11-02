@@ -8,6 +8,7 @@ class Negacion
 {
 public:
    Negacion(bool val_a, bool val_b);
+   Negacion();
    ~Negacion();
    bool getVal2(void);
    void setVal2(bool newVal2);
