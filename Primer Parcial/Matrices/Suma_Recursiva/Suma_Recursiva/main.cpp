@@ -1,3 +1,12 @@
+/*************************
+ * UFA-ESPE
+ * ALUMNOS:  Leonardo Obando, William Leon 
+ * FECHA : Lunes, 14 de noviembre de 2022
+ * Enunciado del problema: Crear programa para sumar y multiplicar matrices, 
+    Usando Clases y Templates e ingresando datos por teclado
+ * Nivel: TERCERO NRC: 7999
+ * Git:https://github.com/leojeff145/Grupo_18_Estructura_de_Datos
+ *************************/
 #include "Matriz.cpp"
 #include <stdio.h>
 #include <stdlib.h>
