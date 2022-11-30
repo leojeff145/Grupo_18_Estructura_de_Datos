@@ -17,7 +17,7 @@ void Menu::menuPrincipaListaCircular() {
     {
         system("cls");
         cout << "\t\t\t--------------" << endl;
-        cout << "\n\n\t\t\tROL DE PAGOS" << endl;
+        cout << "\t\t\tROL DE PAGOS" << endl;
         cout << "\t\t\t--------------" << endl;
         cout << "\n\t  1. INGRESO DE PERSONAL" << endl;
         cout << "\t  2. CONSULTAR ROL DE PAGOS" << endl;
@@ -50,7 +50,7 @@ void Menu::menuAdministradorListaCircular() {
     do {
         system("cls");
         cout << "\t\t\t--------------" << endl;
-        cout << "\n\n\t\t\tMENU DE PERSONAL" << endl;
+        cout << "\t\t\tMENU DE PERSONAL" << endl;
         cout << "\t\t\t--------------" << endl;
         cout << "\n\t  1. REGISTRO" << endl;
         cout << "\t  2. MOSTRAR EMPLEADOS" << endl;
@@ -81,7 +81,7 @@ void Menu::menuOPAdminRegistroListaCircular() {
     do {
         system("cls");
         cout << "\t\t\t--------------" << endl;
-        cout << "\n\n\t\t\tREGISTRO DE PERSONAL" << endl;
+        cout << "\t\t\tREGISTRO DE PERSONAL" << endl;
         cout << "\t\t\t--------------" << endl;
         cout << "\n\t  1. REGISTRAR EMPLEADO" << endl;
         cout << "\t  2. REGISTRAR ROL DE PAGO" << endl;
@@ -115,7 +115,7 @@ void Menu::menuOPAdminReportesListaCircular() {
     do {
         system("cls");
         cout << "\t\t\t--------------" << endl;
-        cout << "\n\n\t\t\tRGISTRO DE PERSONAL" << endl;
+        cout << "\t\t\t MOSTRAR PERSONAL" << endl;
         cout << "\t\t\t--------------" << endl;
         cout << "\n\t  1. VER EMPLEADOS" << endl;
         cout << "\t  2. BUSCAR EMPLEADO" << endl;
@@ -126,12 +126,12 @@ void Menu::menuOPAdminReportesListaCircular() {
 
         switch (opcion) {
         case 1:
-            controladorReporte.mostrarClientes();
+            controladorReporte.mostrarPersonal();
             system("pause>nul");
             break;
 
         case 2:
-            controladorReporte.buscarRolDePago();
+            controladorReporte.buscarPersonal();
             system("pause>nul");
             break;
 

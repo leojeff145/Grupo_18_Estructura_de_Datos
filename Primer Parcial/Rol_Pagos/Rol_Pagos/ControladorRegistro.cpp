@@ -14,19 +14,21 @@ void ControladorRegistro::registrarEmpleado() {
 	std::string cargo;
 
 	std::cout << "Registrar cliente:" << std::endl << std::endl;
-
-	apellidos = Validacion::leer_cadena_regex("Ingrese los apellidos: ", "^[a-zA-Z]{2,}(\\s[a-zA-Z]{2,})?$");
-	nombres = Validacion::leer_cadena_regex("Ingrese los nombres: ", "^[a-zA-Z]{2,}(\\s[a-zA-Z]{2,})?$");
-	cargo = Validacion::leer_cadena_regex("Ingrese el cargo: ", "^[a-zA-Z]{2,}(\\s[a-zA-Z]{2,})?$");
+	cout << "Ingrese Apellidos: ";
+	apellidos = Validacion::leer_cadena_regex("", "^[a-zA-Z]{2,}(\\s[a-zA-Z]{2,})?$");
+	cout << "Ingrese Nombres: ";
+	nombres = Validacion::leer_cadena_regex("", "^[a-zA-Z]{2,}(\\s[a-zA-Z]{2,})?$");
+	cout << "Ingrese Cargo: ";
+	cargo = Validacion::leer_cadena_regex("", "^[a-zA-Z]{2,}(\\s[a-zA-Z]{2,})?$");
 
 	auto clientes = leerClientes();
 
 	do {
-		cedula = Validacion::leer_cadena_regex("Ingrese la cedula: ", "^[0-9]{10}$");
+		cout << "Ingresar Cedula: ";
+		cedula = Validacion::leer_cadena_regex("", "^[0-9]{10}$");
 
-		if (!Validacion::cedula_valida(cedula)) {
-			//Validacion::mostrar_mensaje("Cedula invalida", TipoMensaje::Error);
-			cout << "Cedula invalida";
+		if (!Validacion::cedula_valida(cedula)) {			
+			cout << "Cedula invalida"<<endl;
 			continue;
 		}
 
@@ -34,9 +36,8 @@ void ControladorRegistro::registrarEmpleado() {
 			return c.get_cedula() == cedula;
 			});
 
-		if (encontrado) {
-			//Validacion::mostrar_mensaje("Cedula ya registrada", TipoMensaje::Error);
-			cout << "Cedula ya registrada";
+		if (encontrado) {			
+			cout << "Cedula ya registrada"<<endl;
 			continue;
 		}
 
@@ -44,29 +45,27 @@ void ControladorRegistro::registrarEmpleado() {
 	} while (true);
 	
 	Empleado cliente(cedula,nombres,apellidos,cargo);
-	guardarCliente(cliente);
-	//guardarEmpleadoLD(cliente);
-	//guardarEmpleadoLS(cliente);
-	//Validacion::mostrar_mensaje("Datos guardados", TipoMensaje::Correcto);
+	guardarCliente(cliente);	
 	cout << "Datos guardados";
 }
+
+
 void ControladorRegistro::registrarRolPago() {
 	std::string cedula;
 	auto clientes = leerClientes(); // Lista tipo Empleado
 	Nodo_Doble<Empleado>* encontrado;
 
-	if (clientes.estaVacio()) {
-		//Validacion::mostrar_mensaje("No existen empleados registrados", TipoMensaje::Error);
+	if (clientes.estaVacio()) {		
 		cout << "No existen empleados registrados";
 		return;
 	}
 
 	do {
-		cedula = Validacion::leer_cadena_regex("Ingrese la cedula: ", "^[0-9]{10}$");
+		cout << "Ingresar Cedula: ";
+		cedula = Validacion::leer_cadena_regex("", "^[0-9]{10}$");
 
-		if (!Validacion::cedula_valida(cedula)) {
-			//Validacion::mostrar_mensaje("Cedula invalida", TipoMensaje::Error);
-			cout << "Cedula invalida";
+		if (!Validacion::cedula_valida(cedula)) {			
+			cout << "Cedula invalida"<<endl;
 			continue;
 		}
 
@@ -74,8 +73,7 @@ void ControladorRegistro::registrarRolPago() {
 			return c.get_cedula() == cedula;
 			});
 
-		if (!encontrado) {
-			//Validacion::mostrar_mensaje("Cedula no registrada", TipoMensaje::Error);
+		if (!encontrado) {			
 			cout << "Cedula no registrada";
 			continue;
 		}
@@ -90,10 +88,7 @@ void ControladorRegistro::registrarRolPago() {
 
 	Empleado cliente = encontrado->get_dato();
 	RolDePago asistencia(cliente, salarioR, horasR, feriadoR, prestamoR);
-	guardarRolDePago(asistencia);
-	//guardarRolDePagoLD(asistencia);
-	//guardarRolDePagoLS(asistencia);
-	//Validacion::mostrar_mensaje("Datos guardados", TipoMensaje::Correcto);
+	guardarRolDePago(asistencia);	
 	cout << "Datos guardados";
 }
 
@@ -114,6 +109,8 @@ ListaCircularDoble<Empleado> ControladorRegistro::leerClientes() {
 
 	return clientes;
 }
+
+
 void ControladorRegistro::guardarCliente(Empleado cliente) {
 	auto clientes = leerClientes();
 	std::ofstream archivo("EmpleadosLC.txt", std::ios::trunc);
@@ -125,6 +122,8 @@ void ControladorRegistro::guardarCliente(Empleado cliente) {
 	archivo << cliente.toString() << std::endl;
 	archivo.close();
 }
+
+
 ListaCircularDoble<RolDePago> ControladorRegistro::leerRolDePago() {
 	ListaCircularDoble<RolDePago> asistencias;
 	auto clientes = leerClientes();
@@ -156,6 +155,8 @@ ListaCircularDoble<RolDePago> ControladorRegistro::leerRolDePago() {
 
 	return asistencias;
 }
+
+
 void ControladorRegistro::guardarRolDePago(RolDePago asistencia) {
 	auto asistencias = leerRolDePago();
 	std::ofstream archivo("RoldePagoLC.txt", std::ios::trunc);
@@ -168,143 +169,3 @@ void ControladorRegistro::guardarRolDePago(RolDePago asistencia) {
 	archivo.close();
 }
 
-// LISTAS DOBLES
-/*
-ListaDoble<Empleado> ControladorRegistro::leerEmpleadoLD() {
-	ListaDoble<Empleado> clientes;
-
-	Utileria::leer_lineasLD("EmpleadosLD.txt", [&](std::string linea, ListaDoble<std::string> columnas) {
-		std::string cedula = columnas.obtenerNodoLD(0)->getValor();
-	std::string nombres = columnas.obtenerNodoLD(1)->getValor();
-	std::string apellidos = columnas.obtenerNodoLD(2)->getValor();
-	std::string cargo = columnas.obtenerNodoLD(3)->getValor();
-
-	Empleado cliente(nombres, apellidos, cedula, cargo);
-	clientes.insertarFinalLD(cliente);
-		});
-
-	return clientes;
-}
-void ControladorRegistro::guardarEmpleadoLD(Empleado cliente) {
-	auto clientes = leerEmpleadoLD();
-	std::ofstream archivo("EmpleadosLD.txt", std::ios::trunc);
-
-	clientes.recorrerLD([&](Empleado c) {
-		archivo << c.toString() << std::endl;
-		});
-
-	archivo << cliente.toString() << std::endl;
-	archivo.close();
-}
-ListaDoble<RolDePago> ControladorRegistro::leerRolDePagoLD() {
-	ListaDoble<RolDePago> rolP;
-	auto clientes = leerEmpleadoLD();
-
-	Utileria::leer_lineasLD("RoldePagoLD.txt", [&](std::string linea, ListaDoble<std::string> columnas) {
-		std::string cedula = columnas.obtenerNodoLD(0)->getValor();
-	std::string salarioU = columnas.obtenerNodoLD(1)->getValor();
-	std::string salarioH = columnas.obtenerNodoLD(2)->getValor();
-	std::string feriadosU = columnas.obtenerNodoLD(3)->getValor();
-	std::string prestamoI = columnas.obtenerNodoLD(4)->getValor();
-	std::string total = columnas.obtenerNodoLD(5)->getValor();
-	float salarioU1 = std::stof(salarioU);
-	float salarioH1 = std::stof(salarioH);
-	float feriadosU1 = std::stof(feriadosU);
-	float prestamoI1 = std::stof(prestamoI);
-
-	auto encontrado = clientes.buscarLD([&](Empleado cliente) {
-		return cliente.getCedula() == cedula;
-		});
-
-	if (!encontrado) {
-		return;
-	}
-
-	Empleado cliente = encontrado->getValor();
-	RolDePago rolPago(cliente, salarioU1, salarioH1, feriadosU1, prestamoI1);
-	rolP.insertarFinalLD(rolPago);
-		});
-
-	return rolP;
-}
-void ControladorRegistro::guardarRolDePagoLD(RolDePago rolpagos) {
-	auto asistencias = leerRolDePagoLD();
-	std::ofstream archivo("RoldePagoLD.txt", std::ios::trunc);
-
-	asistencias.recorrerLD([&](RolDePago a) {
-		archivo << a.toString() << std::endl;
-		});
-
-	archivo << rolpagos.toString() << std::endl;
-	archivo.close();
-}
-
-// LISTAS SIMPLES
-ListaSimple<Empleado> ControladorRegistro::leerEmpleadoLS() {
-	ListaSimple<Empleado> clientes;
-
-	Utileria::leer_lineasLS("EmpleadosLS.txt", [&](std::string linea, ListaSimple<std::string> columnas) {
-		std::string cedula = columnas.obtenerNodoLS(0)->getValor();
-	std::string nombres = columnas.obtenerNodoLS(1)->getValor();
-	std::string apellidos = columnas.obtenerNodoLS(2)->getValor();
-	std::string cargo = columnas.obtenerNodoLS(3)->getValor();
-
-	Empleado cliente(nombres, apellidos, cedula, cargo);
-	clientes.insertarFinalLS(cliente);
-		});
-
-	return clientes;
-}
-void ControladorRegistro::guardarEmpleadoLS(Empleado cliente) {
-	auto clientes = leerEmpleadoLS();
-	std::ofstream archivo("EmpleadosLS.txt", std::ios::trunc);
-
-	clientes.recorrerLS([&](Empleado c) {
-		archivo << c.toString() << std::endl;
-		});
-
-	archivo << cliente.toString() << std::endl;
-	archivo.close();
-}
-ListaSimple<RolDePago> ControladorRegistro::leerRolDePagoLS() {
-	ListaSimple<RolDePago> rolP;
-	auto clientes = leerEmpleadoLS();
-
-	Utileria::leer_lineasLS("RoldePagoLS.txt", [&](std::string linea, ListaSimple<std::string> columnas) {
-		std::string cedula = columnas.obtenerNodoLS(0)->getValor();
-	std::string salarioU = columnas.obtenerNodoLS(1)->getValor();
-	std::string salarioH = columnas.obtenerNodoLS(2)->getValor();
-	std::string feriadosU = columnas.obtenerNodoLS(3)->getValor();
-	std::string prestamoI = columnas.obtenerNodoLS(4)->getValor();
-	std::string total = columnas.obtenerNodoLS(5)->getValor();
-	float salarioU1 = std::stof(salarioU);
-	float salarioH1 = std::stof(salarioH);
-	float feriadosU1 = std::stof(feriadosU);
-	float prestamoI1 = std::stof(prestamoI);
-
-	auto encontrado = clientes.buscarLS([&](Empleado cliente) {
-		return cliente.getCedula() == cedula;
-		});
-
-	if (!encontrado) {
-		return;
-	}
-
-	Empleado cliente = encontrado->getValor();
-	RolDePago rolPago(cliente, salarioU1, salarioH1, feriadosU1, prestamoI1);
-	rolP.insertarFinalLS(rolPago);
-		});
-
-	return rolP;
-}
-void ControladorRegistro::guardarRolDePagoLS(RolDePago rolpagos) {
-	auto asistencias = leerRolDePagoLS();
-	std::ofstream archivo("RoldePagoLS.txt", std::ios::trunc);
-
-	asistencias.recorrerLS([&](RolDePago a) {
-		archivo << a.toString() << std::endl;
-		});
-
-	archivo << rolpagos.toString() << std::endl;
-	archivo.close();
-}*/

@@ -6,16 +6,9 @@ private:
 	ControladorRegistro controladorRegistro;
 
 public:
-	void mostrarClientes();
+	void mostrarPersonal();
 	void mostrarRolDePago();
 	void buscarRolDePago();
-
-	void mostrarClientesLD();
-	void mostrarRolDePagoLD();
-	void buscarRolDePagoLD();
-
-	void mostrarClientesLS();
-	void mostrarRolDePagoLS();
-	void buscarRolDePagoLS();
+	void buscarPersonal();
 };
 

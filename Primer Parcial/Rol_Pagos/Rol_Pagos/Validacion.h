@@ -60,9 +60,9 @@ public:
 		do {
 			leido = leer_cadena(etiqueta);
 
-			if (!std::regex_match(leido, cadena_regex)) {
-				//mostrar_mensaje("Formato invalido", TipoMensaje::Error);
-				cout << "Formato invalido";
+			if (!std::regex_match(leido, cadena_regex)) {				
+				cout << "Formato invalido"<<endl;
+				cout << "Reingresar: ";
 			}
 		} while (!std::regex_match(leido, cadena_regex));
 
@@ -165,38 +165,7 @@ public:
 		partes.insertarFinal(cadena.substr(start, end));
 		return partes;
 	}
-
-	/*static ListaDoble<std::string> dividir_cadenaLD(std::string cadena, std::string delimitador) {
-		ListaDoble<std::string> partes;
-		size_t start = 0;
-		auto end = cadena.find(delimitador);
-
-		while (end != std::string::npos) {
-			std::string parte = cadena.substr(start, end - start);
-			partes.insertarFinalLD(parte);
-			start = end + delimitador.length();
-			end = cadena.find(delimitador, start);
-		}
-
-		partes.insertarFinalLD(cadena.substr(start, end));
-		return partes;
-	}
-
-	static ListaSimple<std::string> dividir_cadenaLS(std::string cadena, std::string delimitador) {
-		ListaSimple<std::string> partes;
-		size_t start = 0;
-		auto end = cadena.find(delimitador);
-
-		while (end != std::string::npos) {
-			std::string parte = cadena.substr(start, end - start);
-			partes.insertarFinalLS(parte);
-			start = end + delimitador.length();
-			end = cadena.find(delimitador, start);
-		}
-
-		partes.insertarFinalLS(cadena.substr(start, end));
-		return partes;
-	}*/
+	
 
 
 	static std::string trim_cadena(std::string cadena) {
@@ -231,60 +200,7 @@ public:
 
 		archivo.close();
 	}
-
-	/*static void leer_lineasLD(
-		std::string nombre_archivo,
-		std::function<void(std::string linea, ListaDoble<std::string> datos)> callback) {
-		std::ifstream archivo(nombre_archivo);
-		std::string linea;
-
-		while (std::getline(archivo, linea)) {
-			linea = Utileria::trim_cadena(linea);
-
-			if (linea.empty()) {
-				continue;
-			}
-
-			auto columnas = Utileria::dividir_cadenaLD(linea, ",");
-			int indice = 0;
-
-			columnas.recorrerLD([&](std::string token) {
-				columnas.obtenerNodoLD(indice)->setValor(Utileria::trim_cadena(token));
-			indice++;
-				});
-
-			callback(linea, columnas);
-		}
-
-		archivo.close();
-	}
-
-	static void leer_lineasLS(
-		std::string nombre_archivo,
-		std::function<void(std::string linea, ListaSimple<std::string> datos)> callback) {
-		std::ifstream archivo(nombre_archivo);
-		std::string linea;
-
-		while (std::getline(archivo, linea)) {
-			linea = Utileria::trim_cadena(linea);
-
-			if (linea.empty()) {
-				continue;
-			}
-
-			auto columnas = Utileria::dividir_cadenaLS(linea, ",");
-			int indice = 0;
-
-			columnas.recorrerLS([&](std::string token) {
-				columnas.obtenerNodoLS(indice)->setValor(Utileria::trim_cadena(token));
-			indice++;
-				});
-
-			callback(linea, columnas);
-		}
-
-		archivo.close();
-	}*/
+	
 
 	static std::string cadena_minusculas(std::string cadena) {
 		std::string resultado(cadena);
@@ -294,29 +210,7 @@ public:
 			});
 
 		return resultado;
-	}
-
-	/*static void mostrar_mensaje(std::string mensaje, TipoMensaje tipo = TipoMensaje::Informativo) {
-		rang::fg color;
-
-		if (tipo == TipoMensaje::Informativo) {
-			color = rang::fg::cyan;
-		}
-		else if (tipo == TipoMensaje::Correcto) {
-			color = rang::fg::green;
-		}
-		else if (tipo == TipoMensaje::Error) {
-			color = rang::fg::red;
-		}
-		else {
-			color = rang::fg::cyan;
-		}
-
-		std::cout
-			<< std::endl << rang::style::bold << color
-			<< "(" << mensaje << ")"
-			<< std::endl << rang::style::reset;
-	}*/
+	}	
 
 	static bool existe_archivo(std::string nombre_archivo) {
 		return std::ifstream(nombre_archivo.c_str()).good();
@@ -329,26 +223,7 @@ public:
 
 		return dis(gen);
 	}
-	/*
-	static bool confirmar(std::string pregunta) {
-		char respuesta = 'n';
-		std::string entrada;
-
-		do {
-			std::cout << pregunta << " (s/n): ";
-			std::cin >> entrada;
-
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-			if (entrada.length() > 1) continue;
-
-			respuesta = std::tolower(entrada.at(0));
-		} while (respuesta != 's' && respuesta != 'n');
-
-		return (respuesta == 's');
-	}
-	*/
+	
 
 	static std::string decimal_fixed(float valor, int precision = 2) {
 		std::stringstream ss;
