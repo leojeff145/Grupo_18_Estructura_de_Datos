@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rol de Pago: Fichero Fuente C:/Users/adria/Documents/Estructura de Datos 7999/Github/Grupo_20_Estructura_de_Datos/Primer Parcial/Rol_Pagos/Rol_Pagos/ControladorRegistro.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="espe.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Rol de Pago<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Generador de Roles de Pago</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_69161428018e52ad84691a5947f27cc9.html">Github</a></li><li class="navelem"><a class="el" href="dir_973a9a6a50df32574a53e078f531d248.html">Grupo_20_Estructura_de_Datos</a></li><li class="navelem"><a class="el" href="dir_503b7262906de263fddb7caad2408163.html">Primer Parcial</a></li><li class="navelem"><a class="el" href="dir_695f3da9bdc7d800291f91ed19227c79.html">Rol_Pagos</a></li><li class="navelem"><a class="el" href="dir_ada2509afbd8511f10784edcec9c59f5.html">Rol_Pagos</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">ControladorRegistro.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_controlador_registro_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;<a class="code" href="_lista_circular_doble_8h.html">ListaCircularDoble.h</a>&quot;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;<a class="code" href="_empleado_8h.html">Empleado.h</a>&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="_rol_de_pago_8h.html">RolDePago.h</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_controlador_registro.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_controlador_registro.html">ControladorRegistro</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controlador_registro.html#a3da74e17d455f0a91510cc2ac1e516c6">registrarEmpleado</a>();</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controlador_registro.html#a433a6dea8d45f8aecd2fc9f888b2a615">registrarRolPago</a>();</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_class" href="class_lista_circular_doble.html">ListaCircularDoble&lt;Empleado&gt;</a> <a class="code hl_function" href="class_controlador_registro.html#a07b1c7ad166a75a7dc3168b046d03752">leerClientes</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controlador_registro.html#a0fe552d8ce460265a1b94688235e86d2">guardarEmpleado</a>(<a class="code hl_class" href="class_empleado.html">Empleado</a> empleadoLC);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="comment">//void mostrarClientes();</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_class" href="class_lista_circular_doble.html">ListaCircularDoble&lt;RolDePago&gt;</a> <a class="code hl_function" href="class_controlador_registro.html#a8f3d3169130400046d7863569b922127">leerRolDePago</a>();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_controlador_registro.html#abbc47dbbcfa77f41e9bf004d741cd2d9">guardarRolDePago</a>(<a class="code hl_class" href="class_rol_de_pago.html">RolDePago</a> roldepagoLC);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//void mostrarRolDePago();</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="ttc" id="a_empleado_8h_html"><div class="ttname"><a href="_empleado_8h.html">Empleado.h</a></div></div>
+<div class="ttc" id="a_lista_circular_doble_8h_html"><div class="ttname"><a href="_lista_circular_doble_8h.html">ListaCircularDoble.h</a></div></div>
+<div class="ttc" id="a_rol_de_pago_8h_html"><div class="ttname"><a href="_rol_de_pago_8h.html">RolDePago.h</a></div></div>
+<div class="ttc" id="aclass_controlador_registro_html"><div class="ttname"><a href="class_controlador_registro.html">ControladorRegistro</a></div><div class="ttdef"><b>Definition:</b> <a href="_controlador_registro_8h_source.html#l00005">ControladorRegistro.h:6</a></div></div>
+<div class="ttc" id="aclass_controlador_registro_html_a07b1c7ad166a75a7dc3168b046d03752"><div class="ttname"><a href="class_controlador_registro.html#a07b1c7ad166a75a7dc3168b046d03752">ControladorRegistro::leerClientes</a></div><div class="ttdeci">ListaCircularDoble&lt; Empleado &gt; leerClientes()</div><div class="ttdef"><b>Definition:</b> <a href="_controlador_registro_8cpp_source.html#l00097">ControladorRegistro.cpp:97</a></div></div>
+<div class="ttc" id="aclass_controlador_registro_html_a0fe552d8ce460265a1b94688235e86d2"><div class="ttname"><a href="class_controlador_registro.html#a0fe552d8ce460265a1b94688235e86d2">ControladorRegistro::guardarEmpleado</a></div><div class="ttdeci">void guardarEmpleado(Empleado empleadoLC)</div><div class="ttdef"><b>Definition:</b> <a href="_controlador_registro_8cpp_source.html#l00115">ControladorRegistro.cpp:115</a></div></div>
+<div class="ttc" id="aclass_controlador_registro_html_a3da74e17d455f0a91510cc2ac1e516c6"><div class="ttname"><a href="class_controlador_registro.html#a3da74e17d455f0a91510cc2ac1e516c6">ControladorRegistro::registrarEmpleado</a></div><div class="ttdeci">void registrarEmpleado()</div><div class="ttdef"><b>Definition:</b> <a href="_controlador_registro_8cpp_source.html#l00010">ControladorRegistro.cpp:10</a></div></div>
+<div class="ttc" id="aclass_controlador_registro_html_a433a6dea8d45f8aecd2fc9f888b2a615"><div class="ttname"><a href="class_controlador_registro.html#a433a6dea8d45f8aecd2fc9f888b2a615">ControladorRegistro::registrarRolPago</a></div><div class="ttdeci">void registrarRolPago()</div><div class="ttdef"><b>Definition:</b> <a href="_controlador_registro_8cpp_source.html#l00053">ControladorRegistro.cpp:53</a></div></div>
+<div class="ttc" id="aclass_controlador_registro_html_a8f3d3169130400046d7863569b922127"><div class="ttname"><a href="class_controlador_registro.html#a8f3d3169130400046d7863569b922127">ControladorRegistro::leerRolDePago</a></div><div class="ttdeci">ListaCircularDoble&lt; RolDePago &gt; leerRolDePago()</div><div class="ttdef"><b>Definition:</b> <a href="_controlador_registro_8cpp_source.html#l00128">ControladorRegistro.cpp:128</a></div></div>
+<div class="ttc" id="aclass_controlador_registro_html_abbc47dbbcfa77f41e9bf004d741cd2d9"><div class="ttname"><a href="class_controlador_registro.html#abbc47dbbcfa77f41e9bf004d741cd2d9">ControladorRegistro::guardarRolDePago</a></div><div class="ttdeci">void guardarRolDePago(RolDePago roldepagoLC)</div><div class="ttdef"><b>Definition:</b> <a href="_controlador_registro_8cpp_source.html#l00161">ControladorRegistro.cpp:161</a></div></div>
+<div class="ttc" id="aclass_empleado_html"><div class="ttname"><a href="class_empleado.html">Empleado</a></div><div class="ttdef"><b>Definition:</b> <a href="_empleado_8h_source.html#l00006">Empleado.h:7</a></div></div>
+<div class="ttc" id="aclass_lista_circular_doble_html"><div class="ttname"><a href="class_lista_circular_doble.html">ListaCircularDoble</a></div><div class="ttdef"><b>Definition:</b> <a href="_lista_circular_doble_8h_source.html#l00007">ListaCircularDoble.h:8</a></div></div>
+<div class="ttc" id="aclass_rol_de_pago_html"><div class="ttname"><a href="class_rol_de_pago.html">RolDePago</a></div><div class="ttdef"><b>Definition:</b> <a href="_rol_de_pago_8h_source.html#l00003">RolDePago.h:4</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

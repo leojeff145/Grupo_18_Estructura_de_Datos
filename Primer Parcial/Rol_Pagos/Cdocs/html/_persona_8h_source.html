@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Rol de Pago: Fichero Fuente C:/Users/adria/Documents/Estructura de Datos 7999/Github/Grupo_20_Estructura_de_Datos/Primer Parcial/Rol_Pagos/Rol_Pagos/Persona.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="espe.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Rol de Pago<span id="projectnumber">&#160;1</span>
+   </div>
+   <div id="projectbrief">Generador de Roles de Pago</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_69161428018e52ad84691a5947f27cc9.html">Github</a></li><li class="navelem"><a class="el" href="dir_973a9a6a50df32574a53e078f531d248.html">Grupo_20_Estructura_de_Datos</a></li><li class="navelem"><a class="el" href="dir_503b7262906de263fddb7caad2408163.html">Primer Parcial</a></li><li class="navelem"><a class="el" href="dir_695f3da9bdc7d800291f91ed19227c79.html">Rol_Pagos</a></li><li class="navelem"><a class="el" href="dir_ada2509afbd8511f10784edcec9c59f5.html">Rol_Pagos</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Persona.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_persona_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="class_persona.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="class_persona.html">Persona</a></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>{</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    std::string nombre;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    std::string apellido;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    std::string cedula;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_function" href="class_persona.html#a68a670f3adb901fa14eef86038fbddf1">Persona</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="class_persona.html#a3322edc7246242e62277de9c22f4bed9">   14</a></span>    <a class="code hl_function" href="class_persona.html#a3322edc7246242e62277de9c22f4bed9">Persona</a>(std::string, std::string, std::string);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_function" href="class_persona.html#af187e19a69d05c81d38ca0a542533524">~Persona</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_persona.html#a4298c9b39df2916f377ce91d7a4ddb67">set_nombre</a>(std::string);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_persona.html#a80aa1110ce6c417960acbbd7f2d588a2">set_apellido</a>(std::string);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_persona.html#ac54cbcd5f8439c0dbd9fd2f045299e99">set_cedula</a>(std::string);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::string <a class="code hl_function" href="class_persona.html#ab4b7b4d71600b095fa582a6c1b903dfc">get_nombre</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::string <a class="code hl_function" href="class_persona.html#ab51922218a68a8c064b18704aad9e9f4">get_apellido</a>();</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::string <a class="code hl_function" href="class_persona.html#ac1cf638c87a72a3cba3d5b573927eda2">get_cedula</a>();</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_persona.html#a573683a6c4dd7542544551775691d364">imprimirDatos</a>();</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::string <a class="code hl_function" href="class_persona.html#a0d6bca7bfe64b824f25bb7368f7a9a5d">toString</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="ttc" id="aclass_persona_html"><div class="ttname"><a href="class_persona.html">Persona</a></div><div class="ttdef"><b>Definition:</b> <a href="_persona_8h_source.html#l00005">Persona.h:6</a></div></div>
+<div class="ttc" id="aclass_persona_html_a0d6bca7bfe64b824f25bb7368f7a9a5d"><div class="ttname"><a href="class_persona.html#a0d6bca7bfe64b824f25bb7368f7a9a5d">Persona::toString</a></div><div class="ttdeci">std::string toString()</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00065">Persona.cpp:65</a></div></div>
+<div class="ttc" id="aclass_persona_html_a3322edc7246242e62277de9c22f4bed9"><div class="ttname"><a href="class_persona.html#a3322edc7246242e62277de9c22f4bed9">Persona::Persona</a></div><div class="ttdeci">Persona(std::string, std::string, std::string)</div></div>
+<div class="ttc" id="aclass_persona_html_a4298c9b39df2916f377ce91d7a4ddb67"><div class="ttname"><a href="class_persona.html#a4298c9b39df2916f377ce91d7a4ddb67">Persona::set_nombre</a></div><div class="ttdeci">void set_nombre(std::string)</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00032">Persona.cpp:32</a></div></div>
+<div class="ttc" id="aclass_persona_html_a573683a6c4dd7542544551775691d364"><div class="ttname"><a href="class_persona.html#a573683a6c4dd7542544551775691d364">Persona::imprimirDatos</a></div><div class="ttdeci">void imprimirDatos()</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00058">Persona.cpp:58</a></div></div>
+<div class="ttc" id="aclass_persona_html_a68a670f3adb901fa14eef86038fbddf1"><div class="ttname"><a href="class_persona.html#a68a670f3adb901fa14eef86038fbddf1">Persona::Persona</a></div><div class="ttdeci">Persona(void)</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00008">Persona.cpp:8</a></div></div>
+<div class="ttc" id="aclass_persona_html_a80aa1110ce6c417960acbbd7f2d588a2"><div class="ttname"><a href="class_persona.html#a80aa1110ce6c417960acbbd7f2d588a2">Persona::set_apellido</a></div><div class="ttdeci">void set_apellido(std::string)</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00037">Persona.cpp:37</a></div></div>
+<div class="ttc" id="aclass_persona_html_ab4b7b4d71600b095fa582a6c1b903dfc"><div class="ttname"><a href="class_persona.html#ab4b7b4d71600b095fa582a6c1b903dfc">Persona::get_nombre</a></div><div class="ttdeci">std::string get_nombre()</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00048">Persona.cpp:48</a></div></div>
+<div class="ttc" id="aclass_persona_html_ab51922218a68a8c064b18704aad9e9f4"><div class="ttname"><a href="class_persona.html#ab51922218a68a8c064b18704aad9e9f4">Persona::get_apellido</a></div><div class="ttdeci">std::string get_apellido()</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00053">Persona.cpp:53</a></div></div>
+<div class="ttc" id="aclass_persona_html_ac1cf638c87a72a3cba3d5b573927eda2"><div class="ttname"><a href="class_persona.html#ac1cf638c87a72a3cba3d5b573927eda2">Persona::get_cedula</a></div><div class="ttdeci">std::string get_cedula()</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00043">Persona.cpp:43</a></div></div>
+<div class="ttc" id="aclass_persona_html_ac54cbcd5f8439c0dbd9fd2f045299e99"><div class="ttname"><a href="class_persona.html#ac54cbcd5f8439c0dbd9fd2f045299e99">Persona::set_cedula</a></div><div class="ttdeci">void set_cedula(std::string)</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00027">Persona.cpp:27</a></div></div>
+<div class="ttc" id="aclass_persona_html_af187e19a69d05c81d38ca0a542533524"><div class="ttname"><a href="class_persona.html#af187e19a69d05c81d38ca0a542533524">Persona::~Persona</a></div><div class="ttdeci">~Persona(void)</div><div class="ttdef"><b>Definition:</b> <a href="_persona_8cpp_source.html#l00022">Persona.cpp:22</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>
