@@ -11,13 +11,13 @@ private:
 	float fondosReserva;
 	float totalIngresos;
 	float retencionIess;
-	float prestamoIess;
+	float desPrestamoIess;
 	float totalRetencion;
 	float netoRecibir;
 	
 public:
-	RolDePago(Empleado, float, float, float, float, float, float, float, float, float, float);
-	RolDePago(Empleado, float, float, float, float);
+	RolDePago(Empleado, float, float, float, float, float, float, float, float, float,float);
+	RolDePago(Empleado, float, float, float,float);
 	RolDePago() = default;
 	Empleado get_empleado();
 	float get_sueldo();
@@ -39,7 +39,7 @@ public:
 	void set_retencionIess(float);
 	void set_prestamoIess(float);
 	void set_totalRetencion(float);
-	void set_netoRecibir(float);
+	void set_netoRecibir(float);	
 	void imprimirDatos();
 	std::string toString();
 };

@@ -9,7 +9,7 @@ public:
 	void registrarRolPago();
 
 	ListaCircularDoble<Empleado> leerClientes();
-	void guardarCliente(Empleado empleadoLC);
+	void guardarEmpleado(Empleado empleadoLC);
 	//void mostrarClientes();
 
 	ListaCircularDoble<RolDePago> leerRolDePago();

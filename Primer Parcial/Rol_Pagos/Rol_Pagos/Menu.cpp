@@ -26,6 +26,7 @@ void Menu::menuPrincipaListaCircular() {
 
         cout << "\n\tIngrese una opcion: ";
         opcion=val.ingresar_DatosEnteros();
+        cout << "\n" << endl;
         
 
         switch (opcion) {
@@ -33,7 +34,7 @@ void Menu::menuPrincipaListaCircular() {
             menuAdministradorListaCircular();
             break;
 
-        case 2:
+        case 2:			
             controladorReporte.buscarRolDePago();
             system("pause>nul");
             break;

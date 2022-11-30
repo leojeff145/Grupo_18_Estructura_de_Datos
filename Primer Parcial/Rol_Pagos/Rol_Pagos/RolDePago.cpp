@@ -1,9 +1,12 @@
 #include "RolDePago.h"
 #include <iostream>
+#include <string>
+
+using namespace std;
 #define porcentajeIes 0.0945;
 
 
-RolDePago::RolDePago(Empleado empleado, float sueldo, float horasExtras, float feriados, float subTotal, float fondosReserva, float totalIngresos, float retencionIess, float prestamoIess, float totalRetencion, float netoRecibir)
+RolDePago::RolDePago(Empleado empleado, float sueldo, float horasExtras, float feriados, float subTotal, float fondosReserva, float totalIngresos, float retencionIess,float iess, float totalRetencion, float netoRecibir)
 {
 	this->empleado = empleado;
 	this->sueldo = sueldo;
@@ -13,23 +16,23 @@ RolDePago::RolDePago(Empleado empleado, float sueldo, float horasExtras, float f
 	this->fondosReserva = fondosReserva;
 	this->totalIngresos = totalIngresos;
 	this->retencionIess = retencionIess;
-	this->prestamoIess = prestamoIess;
+	this->desPrestamoIess = iess;
 	this->totalRetencion = totalRetencion;
 	this->netoRecibir = netoRecibir;
 }
 
-RolDePago::RolDePago(Empleado empleado, float sueldo, float horasExtras, float feriados, float subTotal)
+RolDePago::RolDePago(Empleado empleado, float sueldo, float horasExtras, float feriados,float Iess)
 {
 	this->empleado = empleado;
 	this->sueldo = sueldo;
 	this->horasExtras = horasExtras;
 	this->feriados = feriados;
+	this->desPrestamoIess = Iess;	
 	this->subTotal = sueldo + horasExtras + feriados;
 	this->fondosReserva = subTotal / 12;
 	this->totalIngresos = subTotal + fondosReserva;
 	this->retencionIess = subTotal * porcentajeIes;
-	this->prestamoIess = prestamoIess;
-	this->totalRetencion = retencionIess + prestamoIess;
+	this->totalRetencion = retencionIess + Iess ;
 	this->netoRecibir = totalIngresos - totalRetencion;
 }
 
@@ -75,7 +78,7 @@ float RolDePago::get_retencionIess()
 
 float RolDePago::get_prestamoIess()
 {
-	return prestamoIess;
+	return desPrestamoIess;
 }
 
 float RolDePago::get_totalRetencion()
@@ -125,7 +128,7 @@ void RolDePago::set_retencionIess(float retencionIess)
 
 void RolDePago::set_prestamoIess(float prestamoIess)
 {
-	this->prestamoIess = prestamoIess;
+	this->desPrestamoIess = prestamoIess;
 }
 
 void RolDePago::set_totalRetencion(float totalRetencion)
@@ -152,7 +155,7 @@ void RolDePago::imprimirDatos() {
 	std::cout << "       FONDOS RESERVA " << fondosReserva << std::endl;
 	std::cout << "       TOTAL INGRESOS " << totalIngresos << std::endl;
 	std::cout << "       RETENCION IESS " << retencionIess << std::endl;
-	std::cout << "       PRESTAMO IESS " << prestamoIess << std::endl;
+	std::cout << "       PRESTAMO IESS " << desPrestamoIess << std::endl;
 	std::cout << "       TOTAL RETENCION " << totalRetencion << std::endl;
 	std::cout << "       SUELDO NETO A RECIBIR " << netoRecibir << std::endl;
 	std::cout << "\n";
@@ -167,7 +170,7 @@ std::string RolDePago::toString() {
 		std::to_string(fondosReserva) + "," +
 		std::to_string(totalIngresos) + "," +
 		std::to_string(retencionIess) + "," +
-		std::to_string(prestamoIess) + "," +
+		std::to_string(desPrestamoIess) + "," +
 		std::to_string(totalRetencion) + "," +
 		std::to_string(netoRecibir);
 }

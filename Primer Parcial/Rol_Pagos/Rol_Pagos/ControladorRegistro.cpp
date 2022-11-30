@@ -45,7 +45,7 @@ void ControladorRegistro::registrarEmpleado() {
 	} while (true);
 	
 	Empleado cliente(cedula,nombres,apellidos,cargo);
-	guardarCliente(cliente);	
+	guardarEmpleado(cliente);	
 	cout << "Datos guardados";
 }
 
@@ -87,8 +87,8 @@ void ControladorRegistro::registrarRolPago() {
 	float feriadoR = Validacion::leer_flotante("Ingrese el salario por feriados: ", 0.f);	
 	float prestamoR = Validacion::leer_flotante("Ingrese el prestamo realizado al IESS: ", 0.f);
 
-	Empleado cliente = encontrado->get_dato();
-	RolDePago asistencia(cliente, salarioR, horasR, feriadoR, prestamoR);
+	Empleado trabajador = encontrado->get_dato();
+	RolDePago asistencia(trabajador, salarioR, horasR, feriadoR, prestamoR);
 	guardarRolDePago(asistencia);	
 	cout << "Datos guardados";
 }
@@ -112,7 +112,7 @@ ListaCircularDoble<Empleado> ControladorRegistro::leerClientes() {
 }
 
 
-void ControladorRegistro::guardarCliente(Empleado cliente) {
+void ControladorRegistro::guardarEmpleado(Empleado cliente) {
 	auto clientes = leerClientes();
 	std::ofstream archivo("EmpleadosLC.txt", std::ios::trunc);
 
@@ -130,11 +130,11 @@ ListaCircularDoble<RolDePago> ControladorRegistro::leerRolDePago() {
 	auto clientes = leerClientes();
 
 	Validacion::leer_lineas("RoldePagoLC.txt", [&](std::string linea, ListaCircularDoble<std::string> columnas) {
-		std::string cedula = columnas.getPosicion(0)->get_dato();
+	std::string cedula = columnas.getPosicion(0)->get_dato();
 	std::string salarioU = columnas.getPosicion(1)->get_dato();
 	std::string salarioH = columnas.getPosicion(2)->get_dato();
 	std::string feriadosU = columnas.getPosicion(3)->get_dato();
-	std::string prestamoI = columnas.getPosicion(4)->get_dato();
+	std::string prestamoI = columnas.getPosicion(8)->get_dato();
 	std::string total = columnas.getPosicion(5)->get_dato();
 	float salarioU1 = std::stof(salarioU);
 	float salarioH1 = std::stof(salarioH);
@@ -150,7 +150,7 @@ ListaCircularDoble<RolDePago> ControladorRegistro::leerRolDePago() {
 	}
 
 	Empleado cliente = encontrado->get_dato();
-	RolDePago asistencia(cliente, salarioU1, salarioH1, feriadosU1, prestamoI1);
+	RolDePago asistencia(cliente, salarioU1, salarioH1, feriadosU1,prestamoI1);
 	asistencias.insertarFinal(asistencia);
 		});
 
