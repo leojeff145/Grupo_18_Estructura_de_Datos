@@ -36,9 +36,6 @@
     <ClInclude Include="Menu.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Definiciones.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="ControladorRegistro.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>

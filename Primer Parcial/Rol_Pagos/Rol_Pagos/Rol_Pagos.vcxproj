@@ -129,7 +129,6 @@
   <ItemGroup>
     <ClInclude Include="ControladorRegistro.h" />
     <ClInclude Include="ControladorReportes.h" />
-    <ClInclude Include="Definiciones.h" />
     <ClInclude Include="Empleado.h" />
     <ClInclude Include="ListaCircularDoble.h" />
     <ClInclude Include="Menu.h" />

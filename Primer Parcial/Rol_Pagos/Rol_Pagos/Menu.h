@@ -10,6 +10,7 @@
 
 #include "ControladorReportes.h"
 #include "ControladorRegistro.h"
+#include "Validacion.h"
 class Menu
 {
 public:    

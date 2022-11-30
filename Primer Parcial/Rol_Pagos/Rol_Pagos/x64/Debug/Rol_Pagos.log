@@ -1,8 +1,10 @@
 ﻿  ControladorRegistro.cpp
-C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\ControladorRegistro.cpp(82,17): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\ControladorRegistro.cpp(83,15): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\ControladorRegistro.cpp(84,17): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\ControladorRegistro.cpp(85,18): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\Validacion.h(311,14): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
   ControladorReportes.cpp
+C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\Validacion.h(311,14): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  main.cpp
+C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\Validacion.h(311,14): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  Menu.cpp
+C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\Validacion.h(311,14): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
   Generando código...
   Rol_Pagos.vcxproj -> C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\x64\Debug\Rol_Pagos.exe

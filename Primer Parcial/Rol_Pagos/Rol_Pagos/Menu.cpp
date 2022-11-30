@@ -7,6 +7,7 @@ using namespace std;
 
 ControladorReportes controladorReporte;
 ControladorRegistro controladorRegistro;
+Validacion val;
 
 
 void Menu::menuPrincipaListaCircular() {
@@ -24,7 +25,8 @@ void Menu::menuPrincipaListaCircular() {
         cout << "\t  0. REGRESAR" << endl;
 
         cout << "\n\tIngrese una opcion: ";
-        cin >> opcion;
+        opcion=val.ingresar_DatosEnteros();
+        
 
         switch (opcion) {
         case 1:
@@ -57,7 +59,9 @@ void Menu::menuAdministradorListaCircular() {
         cout << "\t  0. REGRESAR" << endl;
 
         cout << "\n\tIngrese una opcion: ";
-        cin >> opcion;
+        opcion=val.ingresar_DatosEnteros();
+        cout << "\n" << endl;
+
 
         switch (opcion) {
         case 1:
@@ -88,7 +92,8 @@ void Menu::menuOPAdminRegistroListaCircular() {
         cout << "\t  0. REGRESAR" << endl;
 
         cout << "\n\tIngrese una opcion: ";
-        cin >> opcion;
+        opcion=val.ingresar_DatosEnteros();
+        cout << "\n" << endl;
 
         switch (opcion) {
         case 1:
@@ -122,7 +127,8 @@ void Menu::menuOPAdminReportesListaCircular() {
         cout << "\t  0. REGRESAR" << endl;
 
         cout << "\n\tIngrese una opcion: ";
-        cin >> opcion;
+        opcion=val.ingresar_DatosEnteros();
+        cout << "\n" << endl;
 
         switch (opcion) {
         case 1:

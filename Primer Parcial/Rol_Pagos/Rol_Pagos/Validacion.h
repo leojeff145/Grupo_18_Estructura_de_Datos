@@ -1,9 +1,5 @@
 #pragma once
 #include "ListaCircularDoble.h"
-
-//#include "rang/rang.hpp"
-#include "Definiciones.h"
-
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -93,18 +89,18 @@ public:
 		return a == b;
 	}
 
-	static double leer_flotante(std::string etiqueta, double minimo = DBL_MIN, double maximo = DBL_MAX) {
-		double leido;
+	static float leer_flotante(std::string etiqueta, float minimo = DBL_MIN, float maximo = DBL_MAX) {
+		float leido;
 		bool valido;
 
 		do {
 			std::cout << etiqueta;
-			std::cin >> leido;
+			leido=Validacion::ingresar_DatosReales();
 
 			valido = !std::cin.fail();
 
 			std::cin.clear();
-			std::cin.ignore();
+			std::cin.ignore();			
 		} while (!valido || leido < minimo || leido > maximo);
 
 		return leido;
@@ -272,6 +268,47 @@ public:
 			<< std::endl;
 
 		return password;
+	}
+
+	static int ingresar_DatosEnteros()
+	{
+		char* dato = new char[10], c;
+		int i = 0;		
+		while ((c = _getch()) != 13) {
+			if (c >= '0' && c <= '9') {
+				printf("%c", c);
+				dato[i++] = c;
+			}
+			else if (c == 8 || c == 127) {
+				printf("\b \b");
+				dato[i--] = 0;
+			}
+		}
+		dato[i] = '\0';
+		return atoi(dato);
+	}
+
+	static float ingresar_DatosReales()
+	{
+		char* dato = new char[10], c;
+		int i = 0, punto = 0;		
+		while ((c = _getch()) != 13) {
+			if (c >= '0' && c <= '9') {
+				printf("%c", c);
+				dato[i++] = c;
+			}
+			else if (c == 8 || c == 127) {
+				printf("\b \b");
+				dato[i--] = 0;
+			}
+			else if (c == '.' && punto == 0) {
+				printf("%c", c);
+				dato[i++] = c;
+				punto--;
+			}
+		}
+		dato[i] = '\0';
+		return atof(dato);
 	}
 };
 
