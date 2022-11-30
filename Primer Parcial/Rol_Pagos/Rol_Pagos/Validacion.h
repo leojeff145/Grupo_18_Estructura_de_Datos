@@ -227,48 +227,7 @@ public:
 		return ss.str();
 	}
 
-	static std::string leer_password(std::string prompt) {
-		std::string password;
-		int i = 0;
-		int ch;
-
-		std::cout << prompt;
-
-		while (true) {
-			ch = _getch();
-
-			if (ch == ' ' || ch == 27) {
-				continue;
-			}
-			else if (ch == 8) {
-				if (i > 0) {
-					std::cout << "\b \b";
-					password.pop_back();
-					--i;
-				}
-				else {
-					continue;
-				}
-			}
-			else if (ch == '\r' || ch == '\t') {
-				break;
-			}
-			else if (ch == 0 || ch == 224) {
-				ch = _getch();
-				continue;
-			}
-			else {
-				password.push_back(ch);
-				i++;
-				std::cout << "*";
-			}
-		}
-
-		std::cout << std::endl
-			<< std::endl;
-
-		return password;
-	}
+	
 
 	static int ingresar_DatosEnteros()
 	{
