@@ -1,3 +1,4 @@
-﻿  RolDePago.cpp
-C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\RolDePago.cpp(34,33): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
+﻿  ControladorRegistro.cpp
+C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\Rol_Pagos\Validacion.h(270,14): warning C4244: 'return': conversión de 'double' a 'float'; posible pérdida de datos
+  LINK : no se encontró C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\x64\Debug\Rol_Pagos.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
   Rol_Pagos.vcxproj -> C:\Users\jeffe\OneDrive\Escritorio\ESPE\ESPE- TERCER SEMESTRE\Estructura de datos\Programas\Parcial 1\Repositorio_Programs\Rol_Pagos\x64\Debug\Rol_Pagos.exe

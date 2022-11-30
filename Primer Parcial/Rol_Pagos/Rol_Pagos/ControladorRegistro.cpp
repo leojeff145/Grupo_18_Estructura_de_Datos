@@ -82,10 +82,10 @@ void ControladorRegistro::registrarRolPago() {
 	} while (true);
 
 	
-	float salarioR = Validacion::leer_flotante("Ingrese el salario unificado: ", 0.f);		
-	float horasR = Validacion::leer_flotante("Ingrese el salario horas extras: ", 0.f);	
+	float salarioR = Validacion::leer_flotante("Ingrese el salario : ", 0.f);		
+	float horasR = Validacion::leer_flotante("Ingrese el salario por horas extras: ", 0.f);	
 	float feriadoR = Validacion::leer_flotante("Ingrese el salario por feriados: ", 0.f);	
-	float prestamoR = Validacion::leer_flotante("Ingrese el prestamo realizado al IESS: ", 0.f);
+	float prestamoR = Validacion::leer_flotante("Ingrese el descuento por  prestamo realizado al IESS: ", 0.f);
 
 	Empleado trabajador = encontrado->get_dato();
 	RolDePago asistencia(trabajador, salarioR, horasR, feriadoR, prestamoR);
