@@ -3,6 +3,15 @@
 #include <functional>
 #include <iostream>
 
+#include <string>
+#include <sstream>
+
+using namespace std;
+
+
+
+
+
 template<typename T>
 class ListaCircularDoble
 {
@@ -24,7 +33,7 @@ public:
 	
 	Nodo_Doble<T>* getCabeza();
 	Nodo_Doble<T>* getCola();
-	Nodo_Doble<T>* getPosicion(int pos);
+	Nodo_Doble<T>* obtenerNodo(int pos);
 	Nodo_Doble<T>* buscar(std::function<bool(T dato)>);
 };
 
@@ -96,7 +105,7 @@ void ListaCircularDoble<T>::insertarPosicion(int pos, T dato)
     }
     else 
     {
-        Nodo_Doble<T>* objetivo = getPosicion(pos);
+        Nodo_Doble<T>* objetivo = obtenerNodo(pos);
         Nodo_Doble<T>* anterior = objetivo->set_anterior();
         Nodo_Doble<T>* siguiente = objetivo->set_siguiente();
         Nodo_Doble<T>* nodo = new Nodo_Doble<T>(dato);
@@ -120,8 +129,8 @@ void ListaCircularDoble<T>::eliminarPosicion(int index)
         if (size > 1) {
             Nodo_Doble<T>* aux = cabeza;
             cabeza = cabeza->get_siguiente();
-            cabeza->set_anterior(aux->set_anterior());
-            aux->set_anterior()->set_siguiente(cabeza);
+            cabeza->set_anterior(aux->get_anterior());
+            aux->get_anterior()->set_siguiente(cabeza);
             delete aux;
         }
         else {
@@ -130,23 +139,25 @@ void ListaCircularDoble<T>::eliminarPosicion(int index)
         }
     }
     else if (index == size - 1) {
-        Nodo_Doble<T>* objetivo = cabeza->set_anterior();
-        Nodo_Doble<T>* aux = objetivo->set_anterior();
+        Nodo_Doble<T>* objetivo = cabeza->get_anterior();
+        Nodo_Doble<T>* aux = objetivo->get_anterior();
         cabeza->set_anterior(aux);
         aux->set_siguiente(cabeza);
         delete objetivo;
     }
     else {
-        Nodo_Doble<T>* objetivo = getPosicion(index);
-        Nodo_Doble<T>* anterior = objetivo->set_anterior();
+        Nodo_Doble<T>* objetivo = obtenerNodo(index);
+        Nodo_Doble<T>* anterior = objetivo->get_anterior();
         Nodo_Doble<T>* siguiente = objetivo->get_siguiente();
 
         delete objetivo;
         anterior->set_siguiente(siguiente);
         siguiente->set_anterior(anterior);
     }
-
+    //cout << size << endl;
     size = size - 1;
+    //cout << size << endl;
+	
 }
 
 template<typename T>
@@ -157,9 +168,10 @@ void ListaCircularDoble<T>::eliminar(std::function<bool(T dato)> filtro)
 
     while (nodo != nullptr) 
     {
-        bool eliminar = filtro(nodo->set_dato());
+        bool eliminar = filtro(nodo->get_dato());
 
         if (eliminar) {
+            //cout << indice << endl;
             eliminarPosicion(indice);
             return;
         }
@@ -167,6 +179,8 @@ void ListaCircularDoble<T>::eliminar(std::function<bool(T dato)> filtro)
         nodo = nodo->get_siguiente();
         indice++;
     }
+	
+	
 }
 
 template <typename T>
@@ -190,7 +204,7 @@ Nodo_Doble<T>* ListaCircularDoble<T>::getCola() {
 }
 
 template<typename T>
-Nodo_Doble<T>* ListaCircularDoble<T>::getPosicion(int indice) 
+Nodo_Doble<T>* ListaCircularDoble<T>::obtenerNodo(int indice) 
 {
     if (indice < 0 || indice >= size) {
         return nullptr;

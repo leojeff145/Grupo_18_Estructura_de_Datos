@@ -170,7 +170,7 @@ public:
 		return (wsback <= wsfront ? std::string() : std::string(wsfront, wsback));
 	}
 
-	static void leer_lineas(
+	static void  leer_lineas(
 		std::string nombre_archivo,
 		std::function<void(std::string linea, ListaCircularDoble<std::string> datos)> callback) {
 		std::ifstream archivo(nombre_archivo);
@@ -187,7 +187,7 @@ public:
 			int indice = 0;
 
 			columnas.recorrer([&](std::string token) {
-				columnas.getPosicion(indice)->set_dato(Validacion::trim_cadena(token));
+				columnas.obtenerNodo(indice)->set_dato(Validacion::trim_cadena(token));
 			indice++;
 				});
 
@@ -206,7 +206,7 @@ public:
 			});
 
 		return resultado;
-	}	
+	}
 
 	static bool existe_archivo(std::string nombre_archivo) {
 		return std::ifstream(nombre_archivo.c_str()).good();

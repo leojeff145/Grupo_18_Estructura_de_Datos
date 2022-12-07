@@ -134,6 +134,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Nodo_Doble.h" />
     <ClInclude Include="Persona.h" />
+    <ClInclude Include="Provincia.h" />
     <ClInclude Include="RolDePago.h" />
     <ClInclude Include="Validacion.h" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Menu.cpp" />
     <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Provincia.cpp" />
     <ClCompile Include="RolDePago.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

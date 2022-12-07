@@ -9,7 +9,11 @@
 #include <sstream>
 
 void ControladorReportes::mostrarPersonal() {
-	auto clientes = controladorRegistro.leerClientes();
+	auto clientes = controladorRegistro.leerClientes();	
+	if (clientes.estaVacio()) {
+		cout << "No existen empleados registrados";
+		return;
+	}
 
 	clientes.recorrer([](Empleado cliente) {
 	std::cout << "CEDULA    : " << cliente.get_cedula() << std::endl;
